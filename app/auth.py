@@ -1,7 +1,7 @@
 from passlib.context import CryptContext
 import os
 from dotenv import load_dotenv
-import jwt
+from jose import jwt
 from datetime import datetime, timedelta
 
 
