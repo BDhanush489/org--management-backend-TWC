@@ -1,0 +1,62 @@
+#############################################
+# CREATE ORGANIZATION
+#############################################
+POST http://localhost:8000/org/create
+Content-Type: application/json
+
+{
+  "organization_name": "VIT",
+  "email": "VIT123@SRM.com",
+  "password": "ecret13"
+}
+
+
+#############################################
+# ADMIN LOGIN
+#############################################
+POST http://localhost:8000/admin/login
+Content-Type: application/json
+
+{
+  "email": "LuckyBhaskar234@LuckyBhaskar.com",
+  "password": "secret123"
+}
+
+
+
+#############################################
+# GET ORGANIZATION DETAILS
+#############################################
+GET http://localhost:8000/org/get?organization_name=LuckyBhaskar
+
+
+
+#############################################
+# UPDATE ORGANIZATION - CHANGE ADMIN EMAIL
+#############################################
+PUT http://localhost:8000/org/update
+Content-Type: application/json
+
+{
+  "organization_name": "LuckyBhaskar",
+  "email": "oldadmin@acm.com"
+}
+
+
+
+#############################################
+# UPDATE ORGANIZATION - CHANGE ADMIN PASSWORD
+#############################################
+PUT http://localhost:8000/org/update
+Content-Type: application/json
+
+{
+  "organization_name": "LuckyBhaskar",
+  "password": "newpassword123"
+}
+
+#############################################
+# DELETE ORGANIZATION
+#############################################
+DELETE http://localhost:8000/org/delete?organization_name=LuckyBhaskar
+X-Admin-Email: oldadmin@acm.com
