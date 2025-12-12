@@ -2,7 +2,8 @@ fastapi
 uvicorn[standard]
 motor
 pydantic
-dotenv
-jwt
-passlib
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
 bcrypt
+email-validator
